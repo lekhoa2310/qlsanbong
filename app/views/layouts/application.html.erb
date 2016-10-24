@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% if yield(:meta).blank? %>
+<title>Controller stadium</title>
+  <% else %>
+  <%= yield(:meta) %>
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  <% if @current_user && @current_user.is_admin %>
+    <%= render "partils/headeradmin" %>
+  <%  end%>
+  <% if !@current_user || @current_user.is_user   %>
+    <%= render "partils/headeruser" %>
+  <% end%>
+<%= yield %>
+</div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+</body>
+</html>

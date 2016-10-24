@@ -1,0 +1,7 @@
+<%if flash[:success]%>
+  <div class="alert alert-success">
+    <%=flash[:success]%>
+  </div>
+<%end%>
+
+<a href="<%= admin_users_path%>" class = "btn btn-info">Quản lý user</a>

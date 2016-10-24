@@ -1,0 +1,42 @@
+
+<%if @user.errors.any? do |error|%>
+  <ul class="alert alert-danger">
+    <% @user.errors.full_messages.each do |message|  %>
+    <li><%= message%></li>
+    <%end%>
+  </ul>
+<%end%>
+<%end%>
+<div class="col-md-4 col-sm-offset-4">
+<%= form_for @user  do |f|%>
+
+
+
+  <div class="form-group">
+    <lable>Name</lable>
+    <%= f.text_field :name, class: "form-control", placeholder: "name"%>
+  </div>
+
+  <div class="form-group">
+    <lable>Address</lable>
+    <%= f.text_field :address, class: "form-control", placeholder: "address"%>
+  </div>
+
+  <div class="form-group">
+    <lable>Phone</lable>
+    <%= f.text_field :phone, class: "form-control", placeholder: "phone"%>
+  </div>
+
+  <div class="form-group">
+    <lable>Email</lable>
+    <%= f.text_field :email, class: "form-control", placeholder: "email "%>
+  </div>
+
+  <div class="form-group">
+    <lable>password</lable>
+    <%= f.text_field :password, class: "form-control", placeholder: "password"%>
+  </div>
+
+  <button type="submit" class="btn btn-primary">create</button>
+<%end%>
+</div>
