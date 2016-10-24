@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Use paginate
-gem 'bootstrap-will_paginate', '0.0.10'
+# gem 'bootstrap-will_paginate', '0.0.10'
 gem 'will_paginate', '3.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
